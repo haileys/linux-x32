@@ -1,6 +1,6 @@
 # Maintainer: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 
-pkgbase=linux
+pkgbase=linux-x32
 pkgver=6.8.6.arch1
 pkgrel=1
 pkgdesc='Linux'
