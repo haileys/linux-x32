@@ -1,4 +1,4 @@
-# Maintainer: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+# Maintainer: Hailey Somerville <linux-x32@hails.org>
 
 pkgbase=linux-x32
 pkgver=6.8.6.arch1
