@@ -1,7 +1,7 @@
 # Maintainer: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
 
 pkgbase=linux
-pkgver=6.8.6.arch1
+pkgver=6.8.7.arch1
 pkgrel=1
 pkgdesc='Linux'
 url='https://github.com/archlinux/linux'
@@ -35,7 +35,6 @@ source=(
   https://cdn.kernel.org/pub/linux/kernel/v${pkgver%%.*}.x/${_srcname}.tar.{xz,sign}
   $url/releases/download/$_srctag/linux-$_srctag.patch.zst{,.sig}
   config  # the main kernel config file
-  docutils.patch  # fix the docs build
 )
 validpgpkeys=(
   ABAF11C65A2970B130ABE3C479BE3E4300411886  # Linus Torvalds
@@ -43,18 +42,16 @@ validpgpkeys=(
   83BC8889351B5DEBBB68416EB8AC08600F108CDF  # Jan Alexander Steffens (heftig)
 )
 # https://www.kernel.org/pub/linux/kernel/v6.x/sha256sums.asc
-sha256sums=('9e723232d603ab45ebf043c34714c48f277ab195c29abcb8472f2a4c3a5a1995'
+sha256sums=('291d1a1faf4e87b3b0ea9729080db887aafd1ff2fac1430ceca921e46bc22fae'
             'SKIP'
-            'db03a8ea8ba5bb3f337c72812831dade02643b481148d3cce3a3855c9d82e53c'
+            'a49b47f89187d2fce6c79f263683bc06b152974b4cf8d8faee535e4bcf04adc7'
             'SKIP'
-            '06f3836f9033024d0b77b79c0792908a79a9d62b652ce5731aa557c395f5449a'
-            '9cb73cacbb3633f207d0c30e738cae9965adcd0b0eb5ecd60563fed1394c0f38')
-b2sums=('fea25d171e8e4e0394211b5589d76fd85537094dc80c135e80fc8bd32acf0d6f4f34524c35df960e8c7ee488c8288d158fc233d6cc7a76182996a658741da71b'
+            '39d0c1e31b905fc7409a372b1371d440f3f95af61cdaed6dc791dcab4d2b611b')
+b2sums=('e8626a99c6c5769a8126d5ee1c7962c3df3c7a8c689193ffa864c4a4b8e72daeeaf22c3e3bb6ba5490eca3ef64c32a4a12980360a196444a53abadd791cd1855'
         'SKIP'
-        '25d58044c04e7d302de814a9e207da4a90cc66f0c497b6a6ce3d2f643ef3d757658fbe465080902ef9216f9a4a68e41e75f17ca2c381eb3fa5935be5566da8ac'
+        'ae851de7fbe18ace280440a0125e5a0d864e4d648e1161ad03c99eaabf7d228d6c9c6869520ddd14b546c14e30b17c6a191d947ad4e9652cd8af9d9ad209eef3'
         'SKIP'
-        'ddeda2f7764fd4889362d89a77cf5affb6ce62710d56e7966eabfc56733c1f893888abc88f8ddce51bc081dc8db3979ebc8518deb9ad35127abb9d3e6fea4286'
-        '0bb42a22c110f06a45e59a9adc194184a51ff97e5584d6ffabca0aa37e1e65ccaf44f43dc744eaa3861d6f6b00e299d4662bcf0c0d94478af9352b4c4f6b0ffd')
+        'ea1e6753e019bcb944c5eeba37837e3f460e3214dd9c0a3454258b3f9a2e53bf90575f3e7c1ea7648c1f0c4dcf6d9ef2bb7baa5434b04e55383ad6809114d373')
 
 export KBUILD_BUILD_HOST=archlinux
 export KBUILD_BUILD_USER=$pkgbase
